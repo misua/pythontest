@@ -79,7 +79,7 @@ def get_mailtm_headers(account_id, token):
 # code needs to have a function to read an email
 def read_email(account_id, token,message_id):
     def _read_req():
-        return requests.get(f"https://api.mail.tm/{message_id}", headers = {
+        return requests.get(f"https://api.mail.tm/messages/{message_id}", headers = {
                 "Accept": "application/json",
                 "Content-Type":"application/json",
                 "Authorization": f"Bearer {token}"
@@ -110,16 +110,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-            
-
-
-
-
-    
-    
-    
-
-
-
-
